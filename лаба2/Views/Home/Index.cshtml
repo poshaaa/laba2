@@ -1,0 +1,80 @@
+﻿@model лаба2.Models.dataset
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="parent">
+    <div class="child">
+        <h1 style="margin-top: 1em">Новый заказ</h1><hr />
+        
+        <form method="post">
+            <p>
+                <label>Дата заказа:</label><br />
+                <input type="date" name="data"/>
+            </p>
+
+            <p>
+                <label>ФИО заказчика:</label><br />
+                <input type="text" name="ownername"/>
+            </p>
+
+            <p>
+                <label>Фамилия:</label><br />
+                <input type="text" name="lastame"/>
+            </p>
+
+            <p>
+                <label>Номер телефона:</label><br/>
+                <input type="text" name="phonenumber"
+                       pattern="+7[0-9]{10}">
+            </p>
+
+            <p>
+                <label> Услуга:</label><br />
+                <input name="servicename" type="radio" value="cleaning" />
+                <span>влажная уборка</span> <br />
+                <input name="servicename" type="radio" value="vacuum" />
+                <span>вакуумная уборка</span> <br />
+                <input name="servicename" type="radio" value="laundry" />
+                <span>стирка одежды</span> <br />
+                <input name="servicename" type="radio" value="ironing" />
+                <span>глажка одежды</span> <br />
+
+            </p>
+
+            <p>
+                <label>Доп. услуги:</label><br />
+                <input name="plusservice" type="radio" value="notused" />
+                <span>нет</span> <br />
+                <input name="plusservice" type="radio" value="used" />
+                <span>есть</span> <br />
+
+            </p>
+
+            <p>
+                <label>Адрес:</label><br />
+                <textarea name="adress" ></textarea>
+            </p><hr />
+            <p class="rating-area">
+                <input type="radio" id="star-5" name="review" value="super">
+                <label for="star-5" title="Оценка «5»"></label>
+                <input type="radio" id="star-4" name="review" value="good">
+                <label for="star-4" title="Оценка «4»"></label>
+                <input type="radio" id="star-3" name="review" value="normal">
+                <label for="star-3" title="Оценка «3»"></label>
+                <input type="radio" id="star-2" name="review" value="bad">
+                <label for="star-2" title="Оценка «2»"></label>
+                <input type="radio" id="star-1" name="review" value="awful">
+                <label for="star-1" title="Оценка «1»"></label>
+            </p>
+
+            <p style="margin-top: 1em; padding-left: 12em">
+                <input type="submit" value="Добавить" class="rounded-pill" />
+            </p>
+
+        </form>
+
+    </div>
+</div>
+
+
+
